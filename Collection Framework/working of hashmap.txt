@@ -1,0 +1,3 @@
+1. Hash Maps use an array table to store its key value pairs. Each element of the array holds the head of a linked list to avoid collision.
+   The hash of every key is calculated and the elements are placed in the array using "Hash Function".
+2. The default capacity is kept at 16 and the load factor at 0.75.   
