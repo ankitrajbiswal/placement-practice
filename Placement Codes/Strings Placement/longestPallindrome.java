@@ -1,3 +1,5 @@
+//GFG Longest Palindrome in a String 
+
 public class longestPallindrome {
     public static void main(String[] args){
         String S = "abbaccd";
