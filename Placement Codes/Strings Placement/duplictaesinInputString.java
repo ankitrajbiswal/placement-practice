@@ -1,4 +1,4 @@
-//GFG Write an efficient program to print all the duplicates and their counts in the input string 
+//GFG Write an efficient program to print all the duplicates and their counts in the input string (Imp)
 
 public class duplictaesinInputString {
     static final int No_Of_Chars=256;
