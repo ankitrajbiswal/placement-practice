@@ -15,8 +15,8 @@ public class subsequencesString {
         al.add(ans);
         return;
     }
-    findsubsequences(s.substring(1)/*nkit*/ ,ans+s.charAt(0) /* a */); //This will function recursively
-    findsubsequences(s.substring(1), ans); //this will function when it will hit Return statement
+    findsubsequences(s.substring(1)/*nkit*/ ,ans+s.charAt(0) /* a */); //This will function recursively ---> Recursion
+    findsubsequences(s.substring(1), ans); //this will function when it will hit Return statement ----> Backtracking
 
     }
     
