@@ -1,3 +1,5 @@
+//GFG Cyclically rotate array by 1
+
 import java.util.*;
 public class cyclicallyRotateArray {
     public static void main(String [] args){
