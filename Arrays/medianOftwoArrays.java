@@ -52,7 +52,45 @@ public class medianOftwoArrays {
     }
 
     static void getnotEqualMedian(int arr1[],int arr2[],int n1,int n2){
-        
+        int i=0,j=0; //i will handle current index of arr1 and j will handle current index of arr2
+        int count;
+        int m1=-1,m2=-1; //m1 and m2 will return median values
+        //since there are n1+n2 elements , there will be two cases, if n1+n2 is odd then median will be (n1+n2)/2
+
+        if((n1+n2)%2==1){
+            for(count=0;count<=(n1+n2)/2;count++){
+                if(i!=n1 && j!=n2 ){
+                    m1=(arr1[i]>arr2[j])?arr2[j++]:arr1[i++];
+                }
+                else if(i<n1){
+                    m1=arr1[i++];
+                }else{
+                    m2=arr2[j++];
+                }
+
+            }
+            System.out.println("The Median is " +m1);
+           // return m1;
+
+        }
+
+        else{
+            for(count=0;count<=(n1+n2)/2;count++){
+                m2=m1;
+                if(i!=n1 && j!=n2){
+                    m1=(arr1[i]>arr2[j])?arr2[j++]:arr1[i++];
+                }else if(i<n1){
+                    m1=arr1[i++];
+                }
+                else{
+                    m1=arr2[j++];   
+                }
+                
+            }
+            System.out.println("The Median is " +(m1+m2/2));
+            //return (m1+m2)/2;
+        }
+
 
     }
     
