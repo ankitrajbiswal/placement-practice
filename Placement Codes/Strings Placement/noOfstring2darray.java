@@ -9,6 +9,7 @@ public class noOfstring2darray {
         }
         System.out.println("Count :" +searchString(needle,0,0,str,str.length,str[0].length()));
     }
+    // Function to search the string in 2d array
       static int searchString(String needle,int row, int col, String str[],int row_count,int col_count){
         int found=0;
         int r,c;
@@ -19,6 +20,7 @@ public class noOfstring2darray {
         }
         return found;
     }
+    //Utility function to search complete string from any given index of 2d array
      static int internalSearch(String needle,int row,int col, String hay[],int row_max,int col_max,int xx){
         int found=0;
         if(row>=0 && row<=row_max && col>=0 && col<=col_max && xx<needle.length() && needle.charAt(xx)==hay[row].charAt(col)){
@@ -31,7 +33,8 @@ public class noOfstring2darray {
                found=1;
             }
             else
-            {
+            { 
+                //Through Backtracking searching in all directions
                 found+=internalSearch(needle, row, col+1, hay, row_max, col_max, xx);
                 found+=internalSearch(needle, row, col-1, hay, row_max, col_max, xx);
                 found+=internalSearch(needle, row+1, col, hay, row_max, col_max, xx);
