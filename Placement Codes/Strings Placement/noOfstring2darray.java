@@ -9,5 +9,15 @@ public class noOfstring2darray {
         }
         System.out.println("Count :" +searchString(needle,0,0,str,str.length,str[0].length()));
     }
+      static int searchString(String needle,int row, int col, String str[],int row_count,int col_count){
+        int found=0;
+        int r,c;
+        for(r=0;r<row_count;++r){
+            for(c=0;c<col_count;++c){
+                found+=internalSearch(needle,r,c,str,row_count-1,col_count-1,0);
+            }
+        }
+        return found;
+    }
     
 }
