@@ -19,5 +19,26 @@ public class noOfstring2darray {
         }
         return found;
     }
-    
+     static int internalSearch(String needle,int row,int col, String hay[],int row_max,int col_max,int xx){
+        int found=0;
+        if(row>=0 && row<=row_max && col>=0 && col<=col_max && xx<needle.length() && needle.charAt(xx)==hay[row].charAt(col)){
+            char match=needle.charAt(xx);
+            xx+=1;
+
+            hay[row]=hay[row].substring(0,col)+"0"+hay[row].substring(col+1);
+
+            if(xx==needle.length()){
+               found=1;
+            }
+            else
+            {
+                found+=internalSearch(needle, row, col+1, hay, row_max, col_max, xx);
+                found+=internalSearch(needle, row, col-1, hay, row_max, col_max, xx);
+                found+=internalSearch(needle, row+1, col, hay, row_max, col_max, xx);
+                found+=internalSearch(needle, row-1, col, hay, row_max, col_max, xx);
+            }
+            hay[row]=hay[row].substring(0,col)+match+hay[row].substring(col+1);
+        }
+        return found;
+    }
 }
