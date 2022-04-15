@@ -1,13 +1,11 @@
 class Solution {
     static int findPosition(int N) {
         // code here
-         if((N&(N-1))!=0)return -1;
-      int res=1;
-      
-      for(int i=N;i>=0;i/=2){
-          if(i%2==0)res++;
-          else break;
-      }
-      return res;
+        if(N==0)
+       return -1;
+       if((int)Math.ceil(Math.log(N)/Math.log(2))!=(int)Math.floor(Math.log(N)/Math.log(2)))
+       return -1;
+       else
+       return (int)(Math.log(N)/Math.log(2))+1;
     }
 };
