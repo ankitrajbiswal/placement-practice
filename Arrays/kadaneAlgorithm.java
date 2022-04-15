@@ -1,8 +1,6 @@
-class Solution{
+//vvvvvvimportant
 
-    // arr: input array
-    // n: size of array
-    //Function to find the sum of contiguous subarray with maximum sum.
+class Solution{
     long maxSubarraySum(int arr[], int n){
         
         // Your code here
